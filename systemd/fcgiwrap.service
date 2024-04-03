@@ -3,9 +3,9 @@ Description=Simple CGI Server
 After=nss-user-lookup.target
 
 [Service]
-ExecStart=/usr/sbin/fcgiwrap
-User=http
-Group=http
+ExecStart=/usr/local/sbin/fcgiwrap -n
+User=nginx
+Group=www-data
 
 [Install]
 Also=fcgiwrap.socket
